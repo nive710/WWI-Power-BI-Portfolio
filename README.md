@@ -12,16 +12,16 @@ An interactive 4-page Power BI report analysing revenue performance, regional tr
 ## Screenshots
 
 ### Page 1 - Revenue and Regional Performance
-![Page 1](screenshots/Page1_Revenue and Regional Performance.PNG)
+![Page 1](screenshots/page1.png)
 
 ### Page 2 - Regional Sales Performance (drillthrough)
-![Page 2](screenshots/Page2_Revenue Sales Performance drillthrough.png)
+![Page 2](screenshots/page2.png)
 
 ### Page 3 - Customer Segmentation Analysis
-![Page 3](screenshots/Page3_Customer Segmentation Analysis.png)
+![Page 3](screenshots/page3.png)
 
 ### Page 4 - Customer Category (drillthrough)
-![Page 4](screenshots/Page4_Customer Category drillthrough.png)
+![Page 4](screenshots/page4.png)
 
 ---
 
