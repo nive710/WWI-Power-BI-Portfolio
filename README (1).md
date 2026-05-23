@@ -1,4 +1,4 @@
-# WWI Revenue and Customer Segmentation
+# Wide World Importers Revenue and Customer Segmentation
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat&logo=microsoft&logoColor=white)
@@ -63,8 +63,8 @@ graph TD
 
 | Measure | What it calculates |
 |---|---|
-| Total Revenue | Sum of revenue from Sales Orders - all orders placed |
-| Invoice Revenue | Sum of revenue from Sales InvoiceLines - confirmed billed amounts only |
+| Sales Revenue | Sum of revenue from Sales Orders - all orders placed |
+| Total Revenue | Sum of revenue from Sales InvoiceLines - confirmed billed amounts only |
 | Total Orders | Distinct count of OrderIDs from Sales Orders |
 | Total Customers | Distinct count of CustomerIDs in context |
 | Total Invoices | Distinct count of InvoiceIDs in context |
@@ -79,7 +79,7 @@ graph TD
 | Dynamic Customer Segmentation Insight | Text measure - top segment share and category efficiency |
 | Dynamic Category Insight | Text measure - category revenue, averages, and top customer contribution |
 
-> Note: Total Revenue and Invoice Revenue are intentionally separate. Not all orders in WWI are immediately invoiced. Total Revenue reflects all orders placed; Invoice Revenue reflects confirmed billed amounts. Segmentation and state-level pages use Invoice Revenue as it better represents realised business performance.
+> Note: Total Revenue and Invoice Revenue are intentionally separate. Not all orders in WWI are immediately invoiced. Sales Revenue reflects all orders placed; Total Revenue reflects confirmed billed amounts. Segmentation and state-level pages use Total Revenue as it better represents realised business performance.
 
 </details>
 
@@ -102,16 +102,17 @@ Data imported from the WideWorldImporters SQL Server database. Key tables used:
 
 - Sales Orders and Sales OrderLines - order and line-level data
 - Sales Invoices and Sales InvoiceLines - invoiced revenue
-- Sales Customers and Sales Customer Segmentation - customer and segment dimensions
+- Sales Customers  - customers
 - Application StateProvinces and Application Cities - geographic dimensions
 - DateTable - custom date table
-- Category revenue trend toggle - disconnected parameter table
+- Sales Customer Segmentation - customer segments imported from sql query
+- Category revenue trend toggle - disconnected parameter table for month vs quarter slicer
 
 ---
 
 ## How to Open
 
-1. Download `WWI_Revenue_and_segmentation.pbix` from this repository
+1. Download `WWI_Revenue_and_Customer segmentation.pbix` from this repository
 2. Open in [Power BI Desktop](https://powerbi.microsoft.com/desktop) (free)
 3. The data is imported as a static snapshot - no SQL Server connection required
 
@@ -119,9 +120,9 @@ Data imported from the WideWorldImporters SQL Server database. Key tables used:
 
 ## Related Projects
 
-- [WWI SQL Portfolio](../WWI-SQL-Portfolio) - six SQL projects on the same dataset covering data profiling, sales performance, customer segmentation, revenue trends, and inventory analysis
+- [WWI SQL Portfolio](../WWI-SQL-Portfolio) - four SQL projects on the same dataset covering data profiling, sales performance, customer segmentation and revenue trend analysis.
 
 ---
 
-Built by Nive | Entry-level Data Analyst | Toronto / Ottawa / Ontario
-[Connect on LinkedIn](https://linkedin.com/in/your-url-here)
+Built by Nivethitha Selvaraj | Data Analyst | Vancouver, Canada
+[Connect on LinkedIn](https://www.linkedin.com/in/nivethitha-s/)
