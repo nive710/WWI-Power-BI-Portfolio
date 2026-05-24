@@ -20,7 +20,7 @@ An interactive 4-page Power BI report analysing revenue performance, regional tr
 ### Page 3 - Customer Segmentation Analysis
 ![Page 3](screenshots/page3.png)
 
-### Page 4 - Customer Category (drillthrough)
+### Page 4 - Customer Category Deep Dive (drillthrough)
 ![Page 4](screenshots/page4.png)
 
 ---
@@ -30,28 +30,29 @@ An interactive 4-page Power BI report analysing revenue performance, regional tr
 ```mermaid
 graph TD
     A[Page 1 - Revenue and Regional Performance] -->|Right-click state - Drill through| B[Page 2 - Regional Sales Performance]
-    C[Page 3 - Customer Segmentation Analysis] -->|Right-click category - Drill through| D[Page 4 - Customer Category]
+    C[Page 3 - Customer Segmentation Analysis] -->|Right-click category - Drill through| D[Page 4 - Customer Category Deep Dive]
 ```
 
 ---
 
 ## Key Findings
 
-Texas, Pennsylvania, and California are the top three revenue-generating states, collectively accounting for ~18% of total revenue — driven by customer volume rather than per-customer value, consistent with WWI's broad B2B wholesale distribution model
-Hawaii's single customer generated $0.4M across 2013-2016, demonstrating that even the smallest market produces high per-customer revenue — reflecting the loyalty and purchasing power of WWI's B2B buyer base
-Loyal Buyers drive 98% of total revenue across all segments — indicating extreme segment concentration with negligible contribution from other customer types
-Novelty Shop customers generate the highest average revenue per customer at $308.63K, outperforming Computer Store ($260.59K) by 18% over the 2013-2016 period
-Revenue growth peaks in January and dips in August across all years, suggesting post-holiday restocking drives Q1 demand — a pattern typical of novelty goods wholesale
+- **Texas leads all states** with $13.7M in revenue from 46 customers and 5,100 orders, versus Hawaii at $0.4M from a single customer. The gap reflects customer volume, not purchasing behaviour, with Hawaii's sole customer still generating strong per-customer revenue consistent with WWI's B2B wholesale model
+- **Revenue growth peaks in January and dips in August** across all years, suggesting post-holiday restocking drives Q1 demand. A pattern typical of novelty goods wholesale where retailers reorder after peak retail seasons
+- **Loyal Buyers drive 98% of total revenue** across all segments, indicating extreme concentration with negligible contribution from other customer types, reflecting WWI's repeat B2B buyer base
+- **Novelty Shop customers** generate the highest average revenue per customer at $308.63K over 2013-2016, outperforming Computer Store ($260.59K) by 18%, consistent with WWI's core novelty and toy product focus aligning most naturally with gift and novelty retailers
+- **Average quarterly growth of 3%** across 2013-2016 indicates steady expansion, with WWI maintaining consistent demand across its wholesale customer base
+
 ---
 
 ## Pages at a Glance
 
 | Page | Type | Key Visuals |
 |---|---|---|
-| Revenue and Regional Performance | Main | Top/bottom state bars, revenue growth % chart, toggle slicer, dynamic insight |
-| Regional Sales Performance | Drillthrough | City bubble map, revenue trend line, customer table, dynamic insight |
-| Customer Segmentation Analysis | Main | Stacked bar, donut chart, avg revenue by segment bar, dynamic insight |
-| Customer Category | Drillthrough | Customer table, revenue and growth % trend line, dynamic insight |
+| Revenue and Regional Performance | Main | 4 KPI cards, dynamic insight, revenue growth % by MonthYear chart, month/quarter toggle slicer, top 5 and bottom 5 revenue generating states bars |
+| Regional Sales Performance | Drillthrough | 5 KPI cards, dynamic insight, customer revenue table with total revenue and total orders, top 10 cities bubble map, revenue trend over time line chart, year slicer |
+| Customer Segmentation Analysis | Main | 4 KPI cards, dynamic insight, average monthly revenue by segment bar, revenue by customer category donut chart, customer mix by segment within each category 100% stacked bar, year slicer |
+| Customer Category Deep Dive | Drillthrough | 4 KPI cards, dynamic insight, customer revenue contribution by segment bar, customer detail table with revenue/orders/segment/category, monthly revenue trend line chart, month/quarter toggle slicer, year slicer |
 
 ---
 
@@ -72,7 +73,7 @@ Revenue growth peaks in January and dips in August across all years, suggesting 
 | Average Customer Revenue | Total Revenue divided by Total Customers | Pages 3, 4 |
 | Average Order per Customer | Total Orders divided by Total Customers | Page 4 |
 | Revenue Growth % | Period-over-period growth via DATEADD, auto-detects month or quarter grain via ISINSCOPE | Pages 1, 4 |
-| Dynamic Revenue Main Insight | Text measure - top/bottom state and peak/low average growth months | Page 1 |
+| Dynamic Revenue Main Insight | Text measure - top/bottom state with customer and order counts, revenue share, and peak/low growth months | Page 1 |
 | Regional Insight | Text measure - regional revenue, orders, peak and low revenue months | Page 2 |
 | Dynamic Customer Segmentation Insight | Text measure - top segment share and top category revenue per customer | Page 3 |
 | Dynamic Category Insight | Text measure - category revenue, averages, top customer contribution with percentage share, and peak and low revenue months | Page 4 |
@@ -85,9 +86,10 @@ Revenue growth peaks in January and dips in August across all years, suggesting 
 
 - **Drillthrough navigation** - two drillthrough pairs connecting summary pages to detail pages
 - **Month/quarter toggle** - disconnected parameter table driving a field parameter slicer across pages
-- **Dynamic DAX insights** - four text measures using TOPN, SELECTEDVALUE, AVERAGEX, ADDCOLUMNS, and CONCATENATEX to generate context-aware narrative cards
-- **Synced slicers** - year slicer on Page 1 syncs silently to Page 2 drillthrough
-- **Custom date table** - marked as date table with MonthNum and MonthYearSort columns for correct time intelligence
+- **Dynamic DAX insights** - four context-aware text measures using TOPN, SELECTEDVALUE, AVERAGEX, ADDCOLUMNS, FILTER, and CONCATENATEX to generate narrative cards that update with every filter selection
+- **Customer and order volume context** - Dynamic Revenue Main Insight calculates customer and order counts per state dynamically using FILTER(ALL()) to override page filter context
+- **Synced slicers** - year slicer on Page 1 syncs silently to Page 2 drillthrough via Power BI sync slicer panel
+- **Custom date table** - marked as date table with MonthNum, MonthYearSort, and QuarterYearSort columns for correct time intelligence and axis ordering
 - **Centralised measure table** - all 14 DAX measures in one All Measures table, none scattered across fact tables
 
 ---
@@ -101,7 +103,7 @@ Data imported from the WideWorldImporters SQL Server database. Key tables used:
 - Sales Customers - customer master
 - Sales Customer Segmentation - customer segments built from a custom SQL query
 - Application StateProvinces and Application Cities - geographic dimensions
-- DateTable - custom date table with Year, MonthYear, MonthName, MonthNum, QuarterYear, Quarter, MonthYearSort columns
+- DateTable - custom date table with Year, MonthYear, MonthName, MonthNum, MonthYearSort, QuarterYear, Quarter, QuarterYearSort columns
 - Month / Qtr Toggle - disconnected parameter table for month vs quarter slicer
 
 ---
