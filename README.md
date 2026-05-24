@@ -37,12 +37,11 @@ graph TD
 
 ## Key Findings
 
-- **Texas** is the top revenue-generating state; **Hawaii** is the lowest
-- Revenue growth peaks on average in **January** and dips in **August** - indicating recurring seasonal demand patterns
-- The top customer segment drives a disproportionate share of total revenue
-- Revenue is concentrated in a small number of urban centers at city level                           
-- Revenue per customer varies significantly across categories, suggesting different pricing or purchasing behaviour by segment
-
+Texas, Pennsylvania, and California are the top three revenue-generating states, collectively accounting for ~18% of total revenue — driven by customer volume rather than per-customer value, consistent with WWI's broad B2B wholesale distribution model
+Hawaii's single customer generated $0.4M across 2013-2016, demonstrating that even the smallest market produces high per-customer revenue — reflecting the loyalty and purchasing power of WWI's B2B buyer base
+Loyal Buyers drive 98% of total revenue across all segments — indicating extreme segment concentration with negligible contribution from other customer types
+Novelty Shop customers generate the highest average revenue per customer at $308.63K, outperforming Computer Store ($260.59K) by 18% over the 2013-2016 period
+Revenue growth peaks in January and dips in August across all years, suggesting post-holiday restocking drives Q1 demand — a pattern typical of novelty goods wholesale
 ---
 
 ## Pages at a Glance
