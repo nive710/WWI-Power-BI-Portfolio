@@ -107,12 +107,27 @@ Data imported from the WideWorldImporters SQL Server database. Key tables used:
 - Month / Qtr Toggle - disconnected parameter table for month vs quarter slicer
 
 ---
+# Wide World Importers Dataset
+
+## About the Data
+* **Source:** Microsoft Sample Datasets
+* **Original Database:** Wide World Importers (WWI)
+* **Type:** Relational database representing a wholesale novelty goods importer.
+
+## Access the Original Data
+Since the backup file exceeds GitHub's standard file size limits, you can download the original `.bak` file directly from Microsoft:
+* [Download Wide World Importers Full Backup](https://github.com/microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Standard.bak)
+
+## How to Restore
+1. Download the `WideWorldImporters-Standard.bak` file.
+2. Move it to your SQL Server backup directory.
+3. Open SQL Server Management Studio (SSMS) and run the restore wizard.
 
 ## How to Open
 
-1. Download `WWI_Revenue_and_Customer_Segmentation.pbix` from this repository
+1. Download `WWI_Revenue_and_Customer_Segmentation.pbix` from this repository.
 2. Open in [Power BI Desktop](https://powerbi.microsoft.com/desktop) (free)
-3. The data was imported from WideWorldImporters SQL Server and is embedded as a static snapshot - no database connection required
+3. The PBIX file contains an imported snapshot of the dataset, so the report can be viewed without connecting to SQL Server.
 
 ---
 
