@@ -116,7 +116,7 @@ Data imported from the WideWorldImporters SQL Server database. Key tables used:
 
 ## Access the Original Data
 Since the backup file exceeds GitHub's standard file size limits, you can download the original `.bak` file directly from Microsoft using the first link.
-* [Download Wide World Importers Full Backup](https://github.com/microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Standard.bak)
+* [Download Wide World Importers-Standard.bak](https://github.com/microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Standard.bak)
 * [Wide World Importers Dataset Source Link](https://github.com/microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)
 
 ## How to Restore
