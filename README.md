@@ -134,7 +134,7 @@ Since the backup file exceeds GitHub's standard file size limits, you can downlo
 
 ## Related Projects
 
-- [WWI SQL Portfolio](../WWI-SQL-Portfolio) - four SQL projects on the same dataset covering data profiling, sales performance, customer segmentation, and revenue trend analysis
+- [WWI SQL Portfolio](https://github.com/nive710/WWI-SQL-Portfolio) - four SQL projects on the same dataset covering data profiling, sales performance, customer segmentation, and revenue trend analysis
 
 ---
 
