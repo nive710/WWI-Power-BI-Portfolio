@@ -11,17 +11,17 @@ An interactive 4-page Power BI report analysing revenue performance, regional tr
 
 ## Screenshots
 
-### Page 1 - Revenue and Regional Performance
-![Page 1](screenshots/page1.png)
+### Page 1 - WWI Sales Overview
+![Page 1](screenshots/page1.PNG)
 
-### Page 2 - Regional Sales Performance (drillthrough)
-![Page 2](screenshots/page2.png)
+### Page 2 - Regional Analysis (drillthrough)
+![Page 2](screenshots/page2.PNG)
 
-### Page 3 - Customer Segmentation Analysis
-![Page 3](screenshots/page3.png)
+### Page 3 - Customer Segments
+![Page 3](screenshots/page3.PNG)
 
-### Page 4 - Customer Category Deep Dive (drillthrough)
-![Page 4](screenshots/page4.png)
+### Page 4 - Category Deep Dive (drillthrough)
+![Page 4](screenshots/page4.PNG)
 
 ---
 
@@ -29,8 +29,8 @@ An interactive 4-page Power BI report analysing revenue performance, regional tr
 
 ```mermaid
 graph TD
-    A[Page 1 - Revenue and Regional Performance] -->|Right-click state - Drill through| B[Page 2 - Regional Sales Performance]
-    C[Page 3 - Customer Segmentation Analysis] -->|Right-click category - Drill through| D[Page 4 - Customer Category Deep Dive]
+    A[Page 1 - WWI Sales Overview] -->|Right-click state - Drill through| B[Page 2 - Regional Analysis]
+    C[Page 3 - Customer Segments] -->|Right-click category - Drill through| D[Page 4 - Category Deep Dive]
 ```
 
 ---
@@ -49,10 +49,10 @@ graph TD
 
 | Page | Type | Key Visuals |
 |---|---|---|
-| Revenue and Regional Performance | Main | 4 KPI cards, dynamic insight, revenue growth % by MonthYear chart, month/quarter toggle slicer, top 5 and bottom 5 revenue generating states bars |
-| Regional Sales Performance | Drillthrough | 5 KPI cards, dynamic insight, customer revenue table with total revenue and total orders, top 10 cities bubble map, revenue trend over time line chart, year slicer |
-| Customer Segmentation Analysis | Main | 4 KPI cards, dynamic insight, average monthly revenue by segment bar, revenue by customer category donut chart, customer mix by segment within each category 100% stacked bar, year slicer |
-| Customer Category Deep Dive | Drillthrough | 4 KPI cards, dynamic insight, customer revenue contribution by segment bar, customer detail table with revenue/orders/segment/category, monthly revenue trend line chart, month/quarter toggle slicer, year slicer |
+| WWI Sales Overview | Main | 4 KPI cards, dynamic insight, revenue growth % by MonthYear chart, month/quarter toggle slicer, top 5 and bottom 5 revenue generating states bars |
+| Regional Analysis | Drillthrough | 5 KPI cards, dynamic insight, customer revenue table with total revenue and total orders, top 10 cities bubble map, revenue trend over time line chart, year slicer |
+| Customer Segments | Main | 4 KPI cards, dynamic insight, average monthly revenue by segment bar, revenue by customer category donut chart, customer mix by segment within each category 100% stacked bar, year slicer |
+| Category Deep Dive | Drillthrough | 4 KPI cards, dynamic insight, customer revenue contribution by segment bar, customer detail table with revenue/orders/segment/category, monthly revenue trend line chart, month/quarter toggle slicer, year slicer |
 
 ---
 
