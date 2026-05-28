@@ -8,6 +8,11 @@
 An interactive 4-page Power BI report analysing revenue performance, regional trends, and customer segmentation across 2013-2016 using the Microsoft WideWorldImporters dataset.
 
 ---
+## Dashboard Walkthrough
+
+![Dashboard Preview](Dashboard_video/dashboard_preview.gif)
+
+[Watch Full Dashboard Walkthrough](Dashboard_video/full_dashboard_walkthrough.mp4)
 
 ## Screenshots
 
